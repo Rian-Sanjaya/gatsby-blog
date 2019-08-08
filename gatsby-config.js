@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'My Blog',
-    description: 'This is my cool blog.'
+    title: 'LoneCode',
+    description: 'Lonely javascript notes and code snipets.'
   },
   plugins: [
     'gatsby-transformer-remark',

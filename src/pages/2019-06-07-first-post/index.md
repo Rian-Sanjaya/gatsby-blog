@@ -1,15 +1,25 @@
 ---
 path: "/first-post"
 date: "2019-06-07 11:01"
-title: "My First Post"
-tags: ["this", "that"]
-excerpt: "A preview of my first post"
+title: "Generate Random Object Data"
+tags: ["javascript", "array", "fill", "map"]
+excerpt: "Generating random object data."
 ---
 
-# Title
+```javascript
+import faker from 'faker';
 
-Lorem ipsum.
-
-## Sub Tittle
-
-Lorem ipsum.
+export const generateRandomData = ({ amount }) =>
+  Array(amount).fill({}).map(() => (
+    {
+      id: faker.random.uuid(),
+      name: faker.name.findName(),
+      phone: faker.phone.phoneNumber(),
+      addressLines: [
+        faker.address.streetAddress(),
+        faker.address.city(),
+        faker.address.country(),
+      ],
+    }
+  ));
+```

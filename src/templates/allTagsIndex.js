@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby'
 
 const AllTagsTemplate = ({data, pageContext}) => {
- console.log(pageContext)
+//  console.log(pageContext)
 
   const { tags } = pageContext
   return (

@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Header from '../components/Header'
 
 const Layout = (props) => {
-  console.log('isi props: ', props)
+  // console.log('isi props: ', props)
   const { data } = props
   const { edges } = data.allMarkdownRemark
   return (
@@ -52,6 +52,7 @@ export const query = graphql `
             title
             path
             date
+            excerpt
           }
         }
       }

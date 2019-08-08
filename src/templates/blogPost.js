@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-const Template = ({data, pageContext}) => {
+// const Template = ({data, pageContext}) => {
+  const Template = (props) => {
   // console.log(props)
   // console.log(pageContext)
-
-  const {next, prev} = pageContext
-  const {markdownRemark} = data
+  
+  const {next, prev} = props.pageContext
+  const {markdownRemark} = props.data
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
 
