@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Layout from '../components/layout'
 
-// const Template = ({data, pageContext}) => {
-  const Template = (props) => {
+const Template = (props) => {
   // console.log(props)
   // console.log(pageContext)
   
@@ -12,7 +12,11 @@ import { graphql, Link } from 'gatsby'
   const html = markdownRemark.html
 
   return (
-    <div>
+    <Layout>
+      <div style={{
+        margin: '0 auto',
+        width: '60%'
+      }}>
       <h1 style={{fontFamily: 'avenir'}}>{title}</h1>
       <div 
         className='blogpost'
@@ -34,7 +38,8 @@ import { graphql, Link } from 'gatsby'
           </Link>
         }
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

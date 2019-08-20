@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'LoneCode',
-    description: 'Lonely javascript notes and code snipets.'
+    description: 'Lonely javascript notes and code snipets'
   },
   plugins: [
     'gatsby-transformer-remark',

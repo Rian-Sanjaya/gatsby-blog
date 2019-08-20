@@ -11,18 +11,28 @@ const TitleAndDescription = ({data}) => {
       fontFamily: 'avenir',
       padding: 10,
     }}>
-      <div>
+      <div
+        style={{flex: 1}}
+      >
         <Link
           style={{
             textDecoration: 'none',
             color: '#3E3E3C',
-            fontSize: 20,
-            fontWeight: 'bold'    
+            fontSize: 18,
+            fontWeight: 'bold'
           }}
           to='/'
         >
           {title}
+          <div style={{
+            fontSize: 12,
+          }}>
+            {description}
+          </div>
         </Link>
+      </div>
+      <div style={{flex: 1, textAlign: 'end', fontSize: 18}}>
+        Categories
       </div>
     </div>
   )
